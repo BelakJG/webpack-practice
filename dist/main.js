@@ -126,7 +126,17 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \**********************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _greeting_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./greeting.js */ \"./src/greeting.js\");\n\n\n\nconsole.log(_greeting_js__WEBPACK_IMPORTED_MODULE_1__.greeting);\n\n//# sourceURL=webpack://webpack-practice/./src/index.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _odin_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./odin.png */ \"./src/odin.png\");\n/* harmony import */ var _greeting_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./greeting.js */ \"./src/greeting.js\");\n\n\n\nconst image = document.createElement(\"img\");\nimage.src = _odin_png__WEBPACK_IMPORTED_MODULE_1__;\ndocument.body.appendChild(image);\n\n\n\nconsole.log(_greeting_js__WEBPACK_IMPORTED_MODULE_2__.greeting);\n\n//# sourceURL=webpack://webpack-practice/./src/index.js?\n}");
+
+/***/ },
+
+/***/ "./src/odin.png"
+/*!**********************!*\
+  !*** ./src/odin.png ***!
+  \**********************/
+(module, __unused_webpack_exports, __webpack_require__) {
+
+eval("{module.exports = __webpack_require__.p + \"78c8e0d442ad5cdfdc58.png\";\n\n//# sourceURL=webpack://webpack-practice/./src/odin.png?\n}");
 
 /***/ }
 
@@ -187,6 +197,18 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _st
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -201,6 +223,29 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _st
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
